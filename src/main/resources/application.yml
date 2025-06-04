@@ -1,0 +1,18 @@
+server.port: 8080
+
+spring:
+  application.name: comment-service
+  datasource:
+    url: jdbc:h2:file:~/algacomments-comment-service-db;CASE_INSENSITIVE_IDENTIFIERS=TRUE;
+    username: sa
+    password: 123
+    driverClassName: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+      settings.web-allow-others: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
